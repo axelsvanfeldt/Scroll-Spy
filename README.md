@@ -1,6 +1,6 @@
 # Scroll Spy
 
-Creating content for your platforms takes a lot of time and resources. You should therefore ask yourself how much of your content that actually reaches your visitors. Valuable content further down on your pages may pass by your visitors completely.
+Creating content for your platforms eats a lot of time and resources. You should therefore ask yourself how much of your content that actually reaches your visitors. Valuable content further down on your pages may pass by your visitors completely.
 Scroll Spy is a lightweight website plugin that detects how far a visitor scrolls each page and reports the data to Google Analytics for analysis, allowing you to alter your layout based on the data.
 
 ## Versions
