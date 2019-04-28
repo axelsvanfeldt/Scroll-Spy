@@ -2,7 +2,7 @@
     'use strict';
 	
     const config = {
-		version: "2.1.1 (ES6+)",
+        version: "2.1.1 (ES6+)",
         levels: [100,80,60,40,20],
         values: [],
         seconds: 0,

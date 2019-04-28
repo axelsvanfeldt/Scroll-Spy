@@ -1,10 +1,8 @@
 (function() {
     'use strict';
-    
-    var document = window.document;
 	
     var config = {
-		version: "1.3.1 (Cross browser)",
+        version: "1.3.1 (Cross browser)",
         levels: [100,80,60,40,20],
         values: [],
         seconds: 0,
