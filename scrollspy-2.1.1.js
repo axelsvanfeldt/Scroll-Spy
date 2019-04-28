@@ -224,9 +224,9 @@
                 if (document.querySelector(".scrollspy-debug-message")) {
                     document.querySelector(".scrollspy-debug-message").innerHTML = msg;
                 }
-				const date = new Date();
+                const date = new Date();
                 const time = date.toLocaleTimeString();
-				const consoleMessage = msg.replace(/<p>|<\/p>|<strong>|<\/strong>/gi, "")
+                const consoleMessage = msg.replace(/<p>|<\/p>|<strong>|<\/strong>/gi, "")
                 window.console.log(`${time} [DEBUG MODE] ${consoleMessage}`);
             }
         }    
