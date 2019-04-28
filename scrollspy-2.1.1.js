@@ -10,15 +10,15 @@
     };
 
     const app = {
-		getDOMstate: () => {
-			if (document.readyState === "interactive" || document.readyState === "complete") {
-				app.getSettings();
-			} else {
-				document.addEventListener("DOMContentLoaded", () => {
-					app.getSettings();
-				});
-			}			
-		},
+        getDOMstate: () => {
+            if (document.readyState === "interactive" || document.readyState === "complete") {
+                app.getSettings();
+            } else {
+                document.addEventListener("DOMContentLoaded", () => {
+				    app.getSettings();
+                });
+            }
+        },
         getSettings: () => {
             const script = document.querySelector("#scrollspy");
             if (script) {

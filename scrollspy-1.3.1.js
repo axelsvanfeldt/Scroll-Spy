@@ -12,15 +12,15 @@
     };
 
     var app = {
-		getDOMstate: function() {
-			if (document.readyState === "interactive" || document.readyState === "complete") {
-				app.getSettings();
-			} else {
-				document.addEventListener("DOMContentLoaded", function() {
-					app.getSettings();
-				});
-			}			
-		},
+        getDOMstate: function() {
+            if (document.readyState === "interactive" || document.readyState === "complete") {
+                app.getSettings();
+            } else {
+                document.addEventListener("DOMContentLoaded", function() {
+                    app.getSettings();
+                });
+            }			
+        },
         getSettings: function() {
             var script = document.querySelector("#scrollspy");
             if (script) {
