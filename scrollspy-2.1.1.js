@@ -204,12 +204,8 @@
         },
         reportData: (data) => {
             let {category, action, label, value} = data;
-            if (config.debug) { 
-                if (value >= 60) {
-                    value = Math.round(value / 60) + " minutes";
-                } else {
-                    value = value + " seconds";
-                }
+            if (config.debug) {
+                value = (value >= 60) ? Math.round(value / 60) + " minutes" : value + " seconds";
                 app.log(`<p>Scroll Spy detected that the visitor has scrolled <strong>${action}</strong> of the page. It took about <strong>${value}</strong>.</p>`);
             } else {
                 if (config.analytics == "universal") {

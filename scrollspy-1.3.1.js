@@ -146,12 +146,8 @@
             config.seconds = 0;
         },
         reportData: function(data) {
-            if (config.debug) { 
-                if (data.value >= 60) {
-                    data.value = Math.round(data.value / 60) + " minutes";
-                } else {
-                    data.value = data.value + " seconds";
-                }
+            if (config.debug) {
+                data.value = (data.value >= 60) ? Math.round(data.value / 60) + " minutes" : data.value + " seconds";
                 app.log('<p>Scroll Spy detected that the visitor has scrolled <strong>' + data.action + '</strong> of the page. It took about <strong>' + data.value + '</strong>.</p>');
             } else {
                 if (config.analytics == "universal") {
