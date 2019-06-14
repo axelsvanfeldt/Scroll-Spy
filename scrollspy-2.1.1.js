@@ -95,7 +95,7 @@
                 const wrapper = document.createElement('div');
                 wrapper.setAttribute("class", "scrollspy-debug-wrapper");
                 wrapper.innerHTML = `
-                <div class="scrollspy-debug-title">SCROLL SPY DEBUGGER</div>
+                <div class="scrollspy-debug-title">Scroll Spy debug window</div>
                 <a href="http://codeant.se" target="_blank">Powered by codeant.se</a>
                 <div class="scrollspy-debug-content scrollspy-debug-content-values">
                     <p>Scroll Spy version:<br><strong>${config.version}</strong></p>
@@ -117,7 +117,7 @@
                     line-height:16px;
                     border:1px solid #999;
                     border-radius:4px;
-                    box-shadow:0 0 8px rgba(0,0,0,0.6);
+                    box-shadow:0 0 5px rgba(0,0,0,0.2);
                     position:fixed;
                     z-index:200;
                     top:20px;
