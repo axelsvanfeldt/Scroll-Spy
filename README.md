@@ -19,6 +19,6 @@ The attribute value should be entered as a `string` with a comma-separated list 
 
 If the parameter `data-debug` is set to `true`, Scroll Spy will display a debug overlay on the page, and *not* report any data to Google Analytics. If omitted, this parameter defaults to `false`.
 
-*Feel free to minimize the script with the minifier of your choice before using Scroll Spy in productional environments.*
+*Feel free to bundle the script with Webpack or minimize it with the minifier of your choice before using Scroll Spy in productional environments.*
 
 https://codeant.se
