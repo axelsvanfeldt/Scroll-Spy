@@ -14,9 +14,7 @@
             if (document.readyState === "interactive" || document.readyState === "complete") {
                 app.getSettings();
             } else {
-                document.addEventListener("DOMContentLoaded", () => {
-                    app.getSettings();
-                });
+                document.addEventListener("DOMContentLoaded", app.getSettings);
             }
         },
         getSettings: () => {
@@ -60,15 +58,15 @@
             app.getTracker();
             app.initializeDebugWindow();
         },
-        addEventListeners: (data) => {
+        addEventListeners: data => {
             if (document.addEventListener) {
-                document.addEventListener(data.action, (e) => {
+                document.addEventListener(data.action, e => {
                     if (e.target && e.target == data.selector) {
                         data.callback();
                     }
                 });
             } else if (document.attachEvent) {
-                document.attachEvent(`on${data.action}`, (e) => {
+                document.attachEvent(`on${data.action}`, e => {
                     if (e.target && e.target == data.selector) {
                         data.callback();
                     }
@@ -89,7 +87,7 @@
         },
         initializeDebugWindow: () => {
             if (config.debug) {
-                let tracker = config.analytics ? `Google Analytics (${config.analytics})` : "None";
+                const tracker = config.analytics ? `Google Analytics (${config.analytics})` : "None";
                 const percentages = `${config.levels.join("%, ")}%`;
                 const body = document.getElementsByTagName("body")[0];
                 const wrapper = document.createElement('div');
@@ -202,7 +200,7 @@
             config.values = [];
             config.seconds = 0;
         },
-        reportData: (data) => {
+        reportData: data => {
             let {category, action, label, value} = data;
             if (config.debug) {
                 value = (value >= 60) ? Math.round(value / 60) + " minutes" : value + " seconds";
@@ -215,7 +213,7 @@
                 }
             }
         },    
-        log: (msg) => {
+        log: msg => {
             if (config.debug) {
                 if (document.querySelector(".scrollspy-debug-message")) {
                     document.querySelector(".scrollspy-debug-message").innerHTML = msg;
